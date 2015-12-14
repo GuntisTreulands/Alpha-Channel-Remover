@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CDCC1771C1F30BD007B738D /* tt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDCC1761C1F30BD007B738D /* tt.png */; };
 		D36CE45A19CEB79D0096DF8F /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CE45919CEB79D0096DF8F /* Drag.m */; };
 		D383AFC119E0555E00FD68AB /* alpha channel remover.gif in Resources */ = {isa = PBXBuildFile; fileRef = D383AFBF19E0555E00FD68AB /* alpha channel remover.gif */; };
 		D383AFC219E0555E00FD68AB /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = D383AFC019E0555E00FD68AB /* title.png */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CDCC1761C1F30BD007B738D /* tt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tt.png; sourceTree = "<group>"; };
 		D36CE45819CEB79D0096DF8F /* Drag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drag.h; sourceTree = "<group>"; };
 		D36CE45919CEB79D0096DF8F /* Drag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drag.m; sourceTree = "<group>"; };
 		D383AFBF19E0555E00FD68AB /* alpha channel remover.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "alpha channel remover.gif"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		D39595E519CA3000005A606C /* Alpha Channel Remover */ = {
 			isa = PBXGroup;
 			children = (
+				5CDCC1761C1F30BD007B738D /* tt.png */,
 				D383AFBF19E0555E00FD68AB /* alpha channel remover.gif */,
 				D383AFC019E0555E00FD68AB /* title.png */,
 				D39595F119CA3000005A606C /* AppDelegate.h */,
@@ -254,6 +257,7 @@
 				D39595EA19CA3000005A606C /* InfoPlist.strings in Resources */,
 				D39595F819CA3000005A606C /* Images.xcassets in Resources */,
 				D383AFC219E0555E00FD68AB /* title.png in Resources */,
+				5CDCC1771C1F30BD007B738D /* tt.png in Resources */,
 				D39595F019CA3000005A606C /* Credits.rtf in Resources */,
 				D383AFC119E0555E00FD68AB /* alpha channel remover.gif in Resources */,
 				D39595F619CA3000005A606C /* MainMenu.xib in Resources */,

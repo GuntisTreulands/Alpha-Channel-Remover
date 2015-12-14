@@ -38,7 +38,7 @@
                                                            CGImageGetBitsPerComponent(imageRef),
                                                            CGImageGetBytesPerRow(imageRef),
                                                            CGImageGetColorSpace(imageRef),
-                                                           kCGImageAlphaNoneSkipLast | kCGBitmapByteOrder32Little
+														   kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Little
                                                            );
         
         CGContextDrawImage(bitmapContext, rect, imageRef);
@@ -46,7 +46,31 @@
         CGImageRef decompressedImageRef = CGBitmapContextCreateImage(bitmapContext);
         
         NSImage *finalImage = [[NSImage alloc] initWithCGImage:decompressedImageRef size:NSZeroSize];
-        NSData *imageData = [finalImage  TIFFRepresentation];
+	
+		NSImage *ttImage = [NSImage imageNamed:@"tt"];
+	
+		NSImage *newImage = [[NSImage alloc] initWithSize:[finalImage size]];
+	
+		[newImage lockFocus];
+
+		CGRect newImageRect = CGRectZero;
+		newImageRect.size = [newImage size];
+
+		[ttImage drawInRect:newImageRect];
+		[finalImage drawInRect:newImageRect];
+
+		[newImage unlockFocus];
+
+		CGImageRef newImageRef = [newImage CGImageForProposedRect:NULL context:nil hints:nil];
+
+	
+	
+		NSImage *finalImage2 = [[NSImage alloc] initWithCGImage:newImageRef size:NSZeroSize];
+	
+
+
+
+        NSData *imageData = [finalImage2  TIFFRepresentation];
         NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
         NSDictionary *imageProps = [NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:0.9] forKey:NSImageCompressionFactor];
         imageData = [imageRep representationUsingType:NSPNGFileType properties:imageProps];
